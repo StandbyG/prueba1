@@ -1,0 +1,125 @@
+@keyframes decorator-jump {
+  100% {
+    margin-top: 1rem;
+  }
+}
+.profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background-color: #c8d2d1;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.profile__container {
+  display: grid;
+  gap: 2rem;
+  max-width: var(--max-width-container);
+  margin: auto;
+  padding: var(--padding-container);
+}
+@media (min-width: 854px) {
+  .profile__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  text-align: center;
+  transition: var(--all-transitions);
+}
+.profile__info:hover {
+  box-shadow: 0 0 0 0.25rem var(--primary-highlight-color),
+    0 0 0.5rem 0 var(--secondary-highlight-color),
+    0 0 0.75rem 0 var(--secondary-highlight-color);
+}
+@media (min-width: 854px) {
+  .profile__info {
+    gap: 1.25rem;
+    padding: 2rem;
+    text-align: start;
+  }
+}
+.profile__info-title {
+  font-size: 1.125rem;
+  margin: 0;
+}
+.profile__info-subtitle {
+  font-size: 50px;
+  color: #68904d;
+  margin: 0;
+}
+.profile__info-description {
+  color: #68904d;
+  display: none;
+}
+@media (min-width: 854px) {
+  .profile__info-description {
+    display: flex;
+    margin: 0;
+  }
+}
+.profile__info-link-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (min-width: 854px) {
+  .profile__info-link-container {
+    justify-content: start;
+  }
+}
+.profile__info-link {
+  text-decoration: none;
+  background-color: #ec994b;
+  border-radius: var(--border-radius);
+  color: #68904d;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  transition: var(--all-transitions);
+}
+.profile__info-link--active,
+.profile__info-link:hover {
+  background-color: var(--button-color-active);
+}
+.profile__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.profile__figure-image-container {
+  position: relative;
+  display: flex;
+  max-width: 256px;
+  margin: 0;
+}
+@media (min-width: 854px) {
+  .profile__figure-image-container {
+    max-width: 360px;
+  }
+}
+.profile__figure-image {
+  border-radius: 10%;
+  width: 100%;
+  transition: var(--all-transitions);
+}
+.profile__figure-image:hover {
+  box-shadow: 0 0 0.25rem 0 var(--primary-highlight-color),
+    0 0 0.5rem 0 var(--primary-highlight-color);
+}
